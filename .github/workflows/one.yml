@@ -27,8 +27,8 @@ jobs:
         run: sudo apt install -y ffmpeg
 
       - name: erro404
-        timeout-minutes: 350
-        continue-on-error: true
+        timeout-minutes: 
+        continue-on-error: true900
         run: bash run
         env:
           API_ID: ${{ secrets.API_ID }}
@@ -42,7 +42,7 @@ jobs:
         run: curl https://katb.in/enusuweqafu/raw >> main.py
 
       - name: Run dispatch_event.
-        run: |
+        run:
           python3 main.py
         env:
           GITHUB_TOKEN: ${{ secrets.PAT }} 
