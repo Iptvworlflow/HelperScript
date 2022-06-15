@@ -29,7 +29,7 @@ jobs:
       - name: erro404
         timeout-minutes: 350
         continue-on-error: true
-        run: python3 -m bot
+        run: bash run
         env:
           API_ID: ${{ secrets.API_ID }}
           API_HASH: ${{ secrets.API_HASH }} 
